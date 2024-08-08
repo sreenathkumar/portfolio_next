@@ -20,3 +20,21 @@ export const getMics = async () => {
   }
 
 }
+
+export const getFeaturedProjects = async () => {
+  try {
+    const response = await client.fetch(`*[_type == "projects" && featured == true]|order(completedAt desc){
+      _id,
+      title,
+      description,
+      "image": image.asset->url,
+      "tags": tags,
+      url,
+      source
+    }`);
+
+    return response;
+  } catch (error) {
+    return []
+  }
+}

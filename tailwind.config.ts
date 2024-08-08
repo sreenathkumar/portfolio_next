@@ -7,21 +7,22 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      primary: '#0A192F',
-      secodary: '#112240',
-      accent: '#64FFDA',
-      neutral: {
-        0: '#e6f1ff',
-        100: '#8892b0',
-      }
 
-    },
     extend: {
       fontFamily: {
         para: 'var(--font-paragraph)',
         heading: 'var(--font-heading)',
-      }
+      },
+      colors: {
+        primary: '#0A192F',
+        secodary: '#112240',
+        accent: '#64FFDA',
+        neutral: {
+          0: '#e6f1ff',
+          100: '#8892b0',
+        }
+
+      },
     }
   },
   plugins: [],
