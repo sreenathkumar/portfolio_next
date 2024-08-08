@@ -16,6 +16,12 @@ const config: Config = {
         100: '#8892b0',
       }
 
+    },
+    extend: {
+      fontFamily: {
+        para: 'var(--font-paragraph)',
+        heading: 'var(--font-heading)',
+      }
     }
   },
   plugins: [],

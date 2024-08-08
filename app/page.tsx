@@ -1,12 +1,20 @@
 import { getMics } from "@/api/queries";
 import Header from "./components/Header";
+import Hero from "./components/Hero";
+import About from "./components/About";
+import Expertise from "./components/Expertise";
 
 async function Home() {
   const mics = await getMics();
+  //console.log(mics);
+
 
   return (
     <>
       <Header logo={mics[0]?.logo} menus={mics[0]?.menu_items} />
+      <Hero />
+      <About photo={mics[0]?.photo} />
+      <Expertise />
     </>
   );
 }
