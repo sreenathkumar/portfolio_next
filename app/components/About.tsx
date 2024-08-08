@@ -22,9 +22,9 @@ function About({ photo }: any) {
                 </div>
             </div>
             <div className="photo mt-10 mb-4 mx-auto relative">
-                <div className="frame border-2 border-accent h-72 w-full rounded"></div>
-                <Image className='h-72 w-full rounded' src={photo?.url} width={284} height={284} alt={photo?.alt} />
-                <div className="overlay h-72 w-full rounded"></div>
+                <div className="frame absolute top-4 -left-4 -z-10 border-2 border-accent h-72 w-full rounded"></div>
+                <Image className='h-72 w-full rounded relative' src={photo?.url} width={284} height={284} alt={photo?.alt} />
+                <div className="overlay absolute top-0 left-0 bg-accent opacity-40 h-72 w-full rounded"></div>
             </div>
         </div>
     )
