@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Expertise from "./components/Expertise";
 import FeaturedProjects from "./components/FeaturedProjects";
+import AllProjects from "./components/AllProjects";
 
 async function Home() {
   const mics = await getMics();
@@ -17,6 +18,7 @@ async function Home() {
       <About photo={mics[0]?.photo} />
       <Expertise />
       <FeaturedProjects />
+      <AllProjects />
     </>
   );
 }

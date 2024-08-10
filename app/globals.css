@@ -3,3 +3,7 @@
 @tailwind utilities;
 
 
+.active-slide {
+  transform: scale(1);
+  transition: all 1s ease;
+}
