@@ -7,7 +7,6 @@ import PostSkeleton from './ui/PostSkeleton';
 
 async function FeaturedProjects() {
     const featuredProjects = await getFeaturedProjects();
-    //console.log(featuredProjects);
 
     return (
         <div className='container px-6 mb-28 mx-auto md:px-20' id="featured">
