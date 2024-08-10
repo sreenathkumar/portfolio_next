@@ -38,3 +38,20 @@ export const getFeaturedProjects = async () => {
     return []
   }
 }
+
+export const getAllProjects = async () => {
+  try {
+    const response = await client.fetch(`*[_type == "projects" && featured!=true]|order(completedAt desc){
+      _id,
+      title,
+      description,
+      "tags": tags,
+      url,
+      source
+    }`);
+
+    return response;
+  } catch (error) {
+    return []
+  }
+}
