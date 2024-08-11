@@ -5,6 +5,8 @@ import About from "./components/About";
 import Expertise from "./components/Expertise";
 import FeaturedProjects from "./components/FeaturedProjects";
 import AllProjects from "./components/AllProjects";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 async function Home() {
   const mics = await getMics();
@@ -19,6 +21,8 @@ async function Home() {
       <Expertise />
       <FeaturedProjects />
       <AllProjects />
+      <Contact />
+      <Footer />
     </>
   );
 }
