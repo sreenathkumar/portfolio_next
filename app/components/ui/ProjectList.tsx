@@ -2,13 +2,9 @@
 
 import { ProjectType } from "@/app/lib/types";
 import { useEffect, useState } from "react";
-import { SwiperSlide, Swiper } from "swiper/react";
 import SingleProject from "./SingleProject";
-import { Pagination } from "swiper/modules";
-import 'swiper/css'
-import 'swiper/css/pagination'
-import Slider from "./Slider";
 import Slide from "./Slide";
+import Slider from "./Slider";
 
 function ProjectList({ projects }: { projects: ProjectType[] }) {
     const [isMobile, setIsMobile] = useState(false);

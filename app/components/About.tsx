@@ -7,7 +7,7 @@ function About({ photo }: any) {
             <div className="about_contents md:pr-10 ">
                 <div className="textandline flex mb-10 md:mb-14 items-center">
                     <h3 className='text-2xl font-heading text-neutral-0'>About Me</h3>
-                    <div className="h-[1px] bg-neutral-100 w-5/12"></div>
+                    <div className="h-[1px] bg-neutral-100 w-5/12 ml-4"></div>
                 </div>
                 <div className="about_texts text-base font-para text-neutral-100 md:max-w-md">
                     <p>

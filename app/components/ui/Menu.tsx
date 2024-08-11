@@ -53,7 +53,7 @@ function MobileMenu({ items }: { items: string[] }) {
         initial={{ x: '-100%' }}
         animate={{ x: isOpen ? '0%' : '100%' }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
-        className="fixed top-0 right-0 w-64 p-4 h-full flex flex-col bg-secodary shadow-lg z-50"
+        className="fixed top-0 right-0 w-64 p-4 h-full flex flex-col bg-secondary shadow-lg z-50"
       >
         <svg onClick={toggleMenu} xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16" className="stroke-accent ml-auto cursor-pointer"><path fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="m11.25 4.75l-6.5 6.5m0-6.5l6.5 6.5" /></svg>
 

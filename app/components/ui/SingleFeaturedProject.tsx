@@ -6,9 +6,9 @@ export default function SingleFeaturedProject({ project, index }: { project: Pro
     let subDes = project.description.length > maxLength ? project.description.substring(0, maxLength) + "..." : project.description
 
     return (
-        <div className={`project_item grid_${(index + 1) % 2 === 0 ? 'even' : 'odd'} min-h-[352px] relative mb-8 md:mb-10 rounded-lg grid grid-cols-12`}>
-            <div className="project_image w-full h-full col-span-full row-span-full">
-                <span className="overlay h-full w-full bg-primary absolute top-0 left-0 opacity-85"></span>
+        <div className={`grid_${(index + 1) % 2 === 0 ? 'even' : 'odd'} min-h-[352px] relative mb-8 md:mb-10 rounded-lg grid grid-cols-12`}>
+            <div className="w-full h-full col-span-full row-span-full">
+                <span className="h-full w-full bg-primary absolute top-0 left-0 opacity-85 rounded-lg"></span>
                 <a className="h-full md:h-auto md:relative block" href={project.url} target="_blank" rel="noreferrer" >
                     <Image src={project.image} className="h-full w-full rounded-lg" width={656} height={502} alt={project.title} />
                 </a>
@@ -34,7 +34,7 @@ export default function SingleFeaturedProject({ project, index }: { project: Pro
                             </svg>
                         </a>
                     </div>
-                    <div className="tags flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-3">
                         {
                             project.tags.map((tag, index) => (
                                 <span key={tag} className=" font-para text-xs text-accent">{tag}</span>

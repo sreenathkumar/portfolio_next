@@ -8,7 +8,7 @@ function Expertise() {
             <div className="expertise_contents">
                 <div className="textandline flex mb-10 md:mb-14 items-center">
                     <h3 className='text-2xl font-heading text-neutral-0'>My Expertise</h3>
-                    <span className="hl"></span>
+                    <span className="w-5/12 bg-neutral-100 h-[1px] ml-4"></span>
                 </div>
 
                 <div className="expertise_text_container">
