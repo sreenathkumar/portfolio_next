@@ -27,7 +27,7 @@ function Menu({ items }: { items: string[] }) {
       {screenWidth && screenWidth < 768 ? (
         <MobileMenu items={items} />
       ) : (
-        <ul className="px-6 flex gap-6">
+        <ul className="flex gap-6">
           {items.map((menu, index) => (
             <MenuItem key={index} text={menu} />
           ))}
