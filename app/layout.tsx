@@ -9,7 +9,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`bg-primary ${montserrat.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body id="root">{children}</body>
     </html>
   );
 }
