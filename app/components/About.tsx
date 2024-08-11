@@ -9,7 +9,7 @@ function About({ photo }: any) {
                     <h3 className='text-2xl font-heading text-neutral-0 md:text-[2rem]'>About Me</h3>
                     <div className="h-[1px] bg-neutral-100 w-5/12 ml-4 md:w-1/2"></div>
                 </div>
-                <div className="text-base font-para text-neutral-100 md:max-w-md">
+                <div className="text-base font-para text-neutral-100 md:max-w-[536px]">
                     <p>
                         Greetings! I&#39;m Sreenath Kumar, a dedicated B.Sc. Mathematics student at BSMRSTU and a passionate Frontend Developer. My expertise lies in crafting captivating user interfaces and seamless experiences using JavaScript, React.js, Tailwind CSS, and TypeScript.
                     </p>
