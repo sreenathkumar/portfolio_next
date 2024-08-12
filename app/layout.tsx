@@ -7,28 +7,28 @@ export const generateMetadata = async () => {
   const siteInfo = await getSiteInfo()
 
   return {
-    title: siteInfo?.title || fallbackSiteInfo.title,
-    description: siteInfo?.description || fallbackSiteInfo.description,
+    title: siteInfo.title || fallbackSiteInfo.title,
+    description: siteInfo.description || fallbackSiteInfo.description,
     openGraph: {
-      title: siteInfo?.title || fallbackSiteInfo.title,
-      description: siteInfo?.description || fallbackSiteInfo.description,
+      title: siteInfo.title || fallbackSiteInfo.title,
+      description: siteInfo.description || fallbackSiteInfo.description,
       images: [{
-        url: siteInfo?.image.url,
+        url: siteInfo.image.url || fallbackSiteInfo.openGraph.image.url,
         width: 800,
         height: 600,
         alt: siteInfo?.title || fallbackSiteInfo.title,
       }]
     },
     icons: {
-      icon: siteInfo?.icon,
-      apple: siteInfo?.icon,
+      icon: siteInfo.icon,
+      apple: siteInfo.icon,
 
     },
     twitter: {
       card: "summary_large_image",
-      title: siteInfo?.title || fallbackSiteInfo.title,
-      description: siteInfo?.description || fallbackSiteInfo.description,
-      image: siteInfo?.image.url,
+      title: siteInfo.title || fallbackSiteInfo.title,
+      description: siteInfo.description || fallbackSiteInfo.description,
+      image: siteInfo.image.url || fallbackSiteInfo.openGraph.image.url
     }
   }
 }
