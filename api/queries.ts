@@ -55,3 +55,21 @@ export const getAllProjects = async () => {
     return []
   }
 }
+
+export const getSiteInfo = async () => {
+  try {
+    const response = await client.fetch(`*[_type == "siteInfo"]{
+      title,
+      description,
+      "image": {
+        "alt": image.alt,
+        "url": image.asset->url
+      },
+      "icon": icon.asset->url
+    }`);
+
+    return response[0];
+  } catch (error) {
+    return null
+  }
+}
