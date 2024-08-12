@@ -12,7 +12,12 @@ export const generateMetadata = async () => {
     openGraph: {
       title: siteInfo?.title || fallbackSiteInfo.title,
       description: siteInfo?.description || fallbackSiteInfo.description,
-      images: fallbackSiteInfo.openGraph.images,
+      images: [{
+        url: siteInfo?.image.url,
+        width: 800,
+        height: 600,
+        alt: siteInfo?.title || fallbackSiteInfo.title,
+      }]
     },
     icons: {
       icon: siteInfo?.icon,
@@ -20,7 +25,7 @@ export const generateMetadata = async () => {
 
     },
     twitter: {
-      cardType: "summary_large_image",
+      card: "summary_large_image",
       title: siteInfo?.title || fallbackSiteInfo.title,
       description: siteInfo?.description || fallbackSiteInfo.description,
       image: siteInfo?.image.url,
