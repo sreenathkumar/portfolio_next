@@ -14,8 +14,8 @@ export const generateMetadata = async () => {
       description: siteInfo.description || fallbackSiteInfo.description,
       images: [{
         url: siteInfo.image.url || fallbackSiteInfo.openGraph.image.url,
-        width: 800,
-        height: 600,
+        width: 1200,
+        height: 630,
         alt: siteInfo?.title || fallbackSiteInfo.title,
       }]
     },
