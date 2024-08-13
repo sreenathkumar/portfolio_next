@@ -1,4 +1,4 @@
-import { getSiteInfo } from "@/api/queries";
+import { getSiteInfo } from "@/actions/sanityQueries";
 import "./globals.css";
 import { inter, montserrat } from "./lib/fonts";
 import { fallbackSiteInfo } from "./lib/fallbackData";
@@ -33,15 +33,21 @@ export const generateMetadata = async () => {
   }
 }
 
-
 export default function RootLayout({
   children,
-}: Readonly<{
+  modal
+}: {
   children: React.ReactNode;
-}>) {
+  modal: React.ReactNode;
+}) {
+
   return (
     <html lang="en" className={`bg-primary ${montserrat.variable} ${inter.variable}`}>
-      <body id="root">{children}</body>
+      <body id="root">
+        {children}
+        {modal}
+        <div id="modal-root"></div>
+      </body>
     </html>
   );
 }

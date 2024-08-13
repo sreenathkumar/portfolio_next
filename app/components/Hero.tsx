@@ -9,7 +9,7 @@ function Hero() {
             <p className='px-6 mb-10 text-neutral-100 font-para md:text-left md:px-0 md:pr-4 md:max-w-3xl'>
                 I am a Frontend website developer. I specialize in creating visually appealing, user-friendly websites that are optimized for performance and search engines. Whether you need a new website or assistance with customization, I&#39;m here to deliver outstanding results. Let&#39;s collaborate and bring your online presence to life!
             </p>
-            <AnimatedButton link='https://www.fiverr.com/sreenath_kumar' text='Get In Touch' />
+            <AnimatedButton link='https://www.fiverr.com/sreenath_kumar' text='Get In Touch' target="_blank" />
         </div>
     )
 }
