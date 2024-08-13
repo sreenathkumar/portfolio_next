@@ -3,7 +3,7 @@ import Link from "next/link"
 
 function Footer() {
     return (
-        <div className="bg-secondary px-3 py-4">
+        <footer className="bg-secondary px-3 py-4">
             <div className="container flex justify-between mx-auto md:px-12">
                 <p className="font-para text-neutral-100 text-xs mx-auto md:mx-0">
                     Developed by<Link href="https://www.fiverr.com/sreenath_kumar" className="text-accent ml-2" target="_blank" rel="noreferrer">Sreenath Kumar</Link>
@@ -40,7 +40,7 @@ function Footer() {
                     Inspired by<Link href="https://brittanychiang.com/" className="text-accent">Brittany Chiang.</Link>
                 </p>
             </div>
-        </div>
+        </footer>
     )
 }
 
