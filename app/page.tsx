@@ -1,4 +1,4 @@
-import { getMics } from "@/api/queries";
+import { getMics } from "@/actions/sanityQueries";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";

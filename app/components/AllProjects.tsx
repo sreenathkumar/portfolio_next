@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react'
 import AnimatedButton from './ui/AnimatedButton'
-import { getAllProjects } from '@/api/queries'
+import { getAllProjects } from '@/actions/sanityQueries'
 import PostSkeleton from './ui/PostSkeleton';
 import ProjectList from './ui/ProjectList';
 
@@ -15,7 +15,7 @@ async function AllProjects() {
             <Suspense fallback={<PostSkeleton />}>
                 <ProjectList projects={projects} />
             </Suspense>
-            <AnimatedButton link='https://github.com/sreenathkumar' text='See All' />
+            <AnimatedButton link='https://github.com/sreenathkumar' text='See All' target='_blank' />
         </div>
     )
 }

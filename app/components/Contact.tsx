@@ -9,7 +9,7 @@ function Contact() {
                 <p className='mb-10 font-para text-base text-neutral-100 text-center'>
                     Ready to bring your ideas to life? Let&#39;s collaborate and create something exceptional together. Whether you need a captivating website, an engaging user interface, or a seamless user experience, I&#39;m here to make it happen. Reach out today and let&#39;s start building!
                 </p>
-                <AnimatedButton link='https://www.fiverr.com/sreenath_kumar' text='Send a ❤' />
+                <AnimatedButton link='/contact' text='Send a ❤' />
             </div>
         </div>
     )

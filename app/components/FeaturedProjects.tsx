@@ -1,9 +1,8 @@
-import React, { Suspense } from 'react'
-import SingleFeaturedProject from './ui/SingleFeaturedProject'
-import client from '@/api/sanity'
-import { getFeaturedProjects } from '@/api/queries';
+import { getFeaturedProjects } from '@/actions/sanityQueries';
+import { Suspense } from 'react';
 import { ProjectType } from '../lib/types';
 import PostSkeleton from './ui/PostSkeleton';
+import SingleFeaturedProject from './ui/SingleFeaturedProject';
 
 async function FeaturedProjects() {
     const featuredProjects = await getFeaturedProjects();

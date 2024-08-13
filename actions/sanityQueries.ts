@@ -1,3 +1,4 @@
+'use server'
 import client from "./sanity"
 
 export const getMics = async () => {
