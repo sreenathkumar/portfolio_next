@@ -4,7 +4,7 @@ import expertiseColumnMaker from '../lib/expertiseColumn';
 function Expertise() {
     const skillSet: string[] = ['JavaScripts', 'React.js', 'Node.js', 'Redux.js', 'TypeScript', 'Tailwind CSS', 'Python', 'Wordpress', 'Woocommerce',];
     return (
-        <div className="block overflow-hidden px-6 mb-28 md:mb-32 md:max-w-xl md:mx-auto" id="expertise">
+        <section className="block overflow-hidden px-6 mb-28 md:mb-32 md:max-w-xl md:mx-auto" id="expertise">
             <div>
                 <div className="flex mb-10 md:mb-14 items-center">
                     <h3 className='text-2xl font-heading text-neutral-0 md:text-[2rem]'>My Expertise</h3>
@@ -21,7 +21,7 @@ function Expertise() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

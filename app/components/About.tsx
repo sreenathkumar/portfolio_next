@@ -3,7 +3,7 @@ import Image from "next/image"
 
 function About({ photo }: any) {
     return (
-        <div className="flex flex-wrap flex-col px-6 mb-28 md:container md:px-6 md:mx-auto md:grid md:grid-flow-col md:max-w-[896px]" id="about">
+        <section className="flex flex-wrap flex-col px-6 mb-28 md:container md:px-6 md:mx-auto md:grid md:grid-flow-col md:max-w-[896px]" id="about">
             <div className="md:pr-10 ">
                 <div className="flex mb-10 md:mb-14 items-center">
                     <h3 className='text-2xl font-heading text-neutral-0 md:text-[2rem]'>About Me</h3>
@@ -26,7 +26,7 @@ function About({ photo }: any) {
                 <Image className='h-72 w-full rounded relative' src={photo?.url} width={284} height={284} alt={photo?.alt} />
                 <div className="overlay absolute top-0 left-0 bg-accent opacity-40 h-72 w-full rounded"></div>
             </div>
-        </div>
+        </section>
     )
 }
 

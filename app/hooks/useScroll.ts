@@ -64,6 +64,11 @@ export function useScroll() {
 
         if (!targetElement) return;
 
+        // Ensure the element is focusable by adding tabindex if not already focusable
+        if (!targetElement.hasAttribute('tabindex')) {
+            targetElement.setAttribute('tabindex', '-1');
+        }
+
         // Calculate the scroll position relative to the top of the page
         const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY;
         const goToTarget = targetPosition - 152;
