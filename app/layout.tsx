@@ -1,7 +1,9 @@
-import { getSiteInfo } from "@/actions/sanityQueries";
+import { getMics, getSiteInfo } from "@/actions/sanityQueries";
 import "./globals.css";
 import { inter, montserrat } from "./lib/fonts";
 import { fallbackSiteInfo } from "./lib/fallbackData";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
 export const generateMetadata = async () => {
   const siteInfo = await getSiteInfo()
@@ -33,19 +35,24 @@ export const generateMetadata = async () => {
   }
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
   modal
 }: {
   children: React.ReactNode;
   modal: React.ReactNode;
 }) {
+  const mics = await getMics();
 
   return (
     <html lang="en" className={`bg-primary ${montserrat.variable} ${inter.variable}`}>
       <body id="root">
+
+        <Header logo={mics[0]?.logo} menus={mics[0]?.menu_items} />
         {children}
         {modal}
+        <Footer />
+
         <div id="modal-root"></div>
       </body>
     </html>

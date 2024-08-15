@@ -26,8 +26,8 @@ function ContactForm() {
             })
         }
     }
-    return (<>
-        <h2 className='font-heading text-[2rem] mb-6 text-center text-neutral-0'>Let’s Build Something Awesome Together!</h2>
+    return (
+
         <form className="max-w-sm mx-auto w-full" onSubmit={handleSubmit}>
             {status.status && <Status text={status.message} type={status.status} />}
             <FormField label="Your name" htmlFor="name">
@@ -43,7 +43,6 @@ function ContactForm() {
 
             <button type="submit" disabled={status.status === 'pending'} className="text-accent hover:bg-accent hover:text-secondary border-2 border-accent font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-cente dark:hover:bg-accent">Submit</button>
         </form >
-    </>
 
     )
 }
