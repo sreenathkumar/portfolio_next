@@ -3,8 +3,8 @@ import Link from "next/link"
 
 function Footer() {
     return (
-        <footer className="bg-secondary px-3 py-4">
-            <div className="container flex justify-between mx-auto md:px-12">
+        <footer className="bg-secondary px-3 py-4 mt-auto w-full">
+            <div className="container flex justify-between mx-auto">
                 <p className="font-para text-neutral-100 text-xs mx-auto md:mx-0">
                     Developed by<Link href="https://www.fiverr.com/sreenath_kumar" className="text-accent ml-2" target="_blank" rel="noreferrer">Sreenath Kumar</Link>
                 </p>
