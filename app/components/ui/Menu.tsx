@@ -24,7 +24,7 @@ function Menu({ items }: { items: string[] }) {
 
   return (
     <>
-      {screenWidth && screenWidth < 768 ? (
+      {screenWidth ? screenWidth < 768 ? (
         <MobileMenu items={items} />
       ) : (
         <ul className="flex gap-6">
@@ -32,7 +32,7 @@ function Menu({ items }: { items: string[] }) {
             <MenuItem key={index} text={menu} />
           ))}
         </ul>
-      )}
+      ) : null}
     </>
   );
 }
@@ -50,7 +50,7 @@ function MobileMenu({ items }: { items: string[] }) {
         aria-controls="mobile-menu" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path d="M4 6a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m0 12a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H5a1 1 0 0 1-1-1m7-7a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2z" /></svg>
       <motion.div
         id="mobile-menu"
-        initial={{ x: '-100%' }}
+        initial={{ x: '100%' }}
         animate={{ x: isOpen ? '0%' : '100%' }}
         transition={{ duration: 0.3, ease: 'easeInOut' }}
         className="fixed top-0 right-0 w-64 p-4 h-full flex flex-col bg-secondary shadow-lg z-50"
